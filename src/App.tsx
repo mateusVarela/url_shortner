@@ -1,42 +1,20 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 import findData from './services/urlRoute'
-import Input from './components/input'
+import InputTest from './components/input'
 import Button from './components/button'
-import './app.css'
+import './App.css'
 
 function App() {
-
-  const [movieList, setMovieList] = useState([])
-
-  useEffect(() => {
-    const loadAll = async () => {
-      console.log("chama função");
-      
-      const list : any = await findData.getHomeList()
-      setMovieList(list)
-      console.log(list, "lista");
-    }
-    loadAll()
-  }, [])
-
-  console.log(movieList);
-  
-
   return (
     <div>
-      <div className="header">
-        Desafio
-      </div>
+      <div className="header">Desafio</div>
       <div className="organize-inputs">
-        <Input/>  <Button/>
-      </div>
-      <div>
-        
+        <InputTest /> <Button />
       </div>
     </div>
   )
 }
 
-export default App;
+export default App

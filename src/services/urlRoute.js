@@ -7,10 +7,8 @@ const findData = async (url) => {
   return response
 }
 
-const data = {originalUrl: "https://www.youtube.com/watch?v=pg-oETA3Lnk&list=RD_cHrjX8l1c8&index=5"}
-
 export default {
-  getHomeList: async () => {
-    return [{items: await findData(data)}]
+  getHomeList: async (data) => {
+    return [{ items: await findData(data) }]
   }
 };

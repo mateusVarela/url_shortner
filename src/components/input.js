@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import { Input } from '@material-ui/core';
 
-export default function input() {
+export default function InputTest() {
+  const [playerName, setPlayerName] = useState('')
   return (
-    <form noValidate autoComplete="off">
-      <TextField id="standard-basic" label="URL" />
-    </form>
-  );
+    < form noValidate autoComplete="off" >
+      <Input id="standard-basic" onChange={e => setPlayerName(e.currentTarget.value)} label="URL" />
+    </form >
+  )
 }
