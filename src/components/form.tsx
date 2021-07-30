@@ -5,13 +5,12 @@ import { Input } from '@material-ui/core'
 import findData from '../services/urlRoute'
 import './form.css'
 
-type algumaCoisa = {
+type dataType = {
   originalUrl?: string
 }
 
-async function newUrlShort(data: algumaCoisa) {
+async function newUrlShort(data: dataType) {
   if (data.originalUrl && data.originalUrl !== '') {
-    console.log(data)
     const urlRequest = await findData.getUrlShort(data)
     const element = (
       <p className="organize-short-url">{urlRequest.newUrl.data.USER_URL}</p>
@@ -23,7 +22,6 @@ async function newUrlShort(data: algumaCoisa) {
 export default function FormUrl() {
   const [urlValue, setUrlValue] = useState('')
   const data = { originalUrl: `${urlValue}` }
-
   return (
     <div className="organize-form">
       <form noValidate autoComplete="off">

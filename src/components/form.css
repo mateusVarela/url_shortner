@@ -8,6 +8,8 @@
     border: solid 1px #ababab;
     border-radius: 5px;
     padding: 10px;
+    font-family: 'Circular';
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .short-url {
