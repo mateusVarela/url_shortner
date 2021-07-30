@@ -1,0 +1,16 @@
+.organize-form, .organize-short-url {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.organize-short-url {
+    border: solid 1px #ababab;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.short-url {
+    display: flex;
+    justify-content: center;
+}
